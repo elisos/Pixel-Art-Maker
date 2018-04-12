@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pixel Art Maker!</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Monoton">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Lab: Pixel Art Maker</h1>
+    <div class="content">
+
+        <div class="gridSizePicker picker">
+            <h2> Choose Canvas Size</h2>
+            <form id="sizePicker">
+                <ul id="numberInputs">
+                    <li>Height:<input type="number" id="input_height" name="height" min="1" max="80" value="15"></li>
+                    <li>Width:<input type="number" id="input_width" name="width" min="1" max="80" value="15"></li>
+                    <li><input type="submit" id="gridbutton" value="Create Canvas!"></li>
+                 </ul>
+            </form>
+            <div id = "instructions">
+                <h3>Instructions:</h3>
+                <p>First, create a canvas with the dimensions of your choosing. Then, once you select a colour you can either click or drag over the pixels to create your artwork. A double click erases the pixel. </p>
+            </div>
+        </div>
+           
+           
+        <div class="canvas">
+            <h2>Design Canvas</h2>
+            <table id="pixel_canvas"></table>
+        </div>
+
+        
+        <div class="colorPicker picker">
+                <h2>Pick A Colour</h2>
+                    <div class="palette">
+                        <div class="palette-column column1">
+                            <button class="palette-button button-red" data-color="#ed5565"></button>
+                            <button class="palette-button button-yellow" data-color="#ffce54"></button>
+                            <button class="palette-button button-green" data-color="#a0d468"></button>
+                            <button class="palette-button button-blue" data-color="#5d9cec"></button>
+                            <button class="palette-button button-turquoise" data-color="#4fd1e9"></button>
+                        </div>
+                        <div class="palette-column column2">
+                            <button class="palette-button button-purple" data-color="#ac92ec"></button>
+                            <button class="palette-button button-pink" data-color="#d770ad"></button>
+                            <button class="palette-button button-grey" data-color="#ccd1d9"></button>
+                            <button class="palette-button button-orange" data-color="#ff6200"></button>
+                            <button class="palette-button button-black" data-color="#333333"></button>
+                        </div>
+                    </div>
+                    <div id=picker-input>
+                        <p>Make your own colour!</p>
+                        <input type="color" id="colorPicker">
+                    </div>
+                    
+        </div>
+    </div>        
+    
+    <footer class="credit">
+        Background pattern: 'Fire' by Cristian Zuzunaga.
+    </footer>
+ 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
